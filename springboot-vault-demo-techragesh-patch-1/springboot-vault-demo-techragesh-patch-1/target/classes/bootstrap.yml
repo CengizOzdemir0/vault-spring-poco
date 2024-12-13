@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    vault:
+      scheme: http
+      host: localhost
+      port: 8200
+      connection-timeout: 5000
+      read-timeout: 15000
+      authentication: token
+      token: 1234
+      kv:
+        backend: secret
+        default-context: kafka
+        application-name: application
+        enabled: true
+      generic:
+        enabled: false
